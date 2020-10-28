@@ -16,13 +16,15 @@ public class PatronDecoradorCafe {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Cafe cafe =new CafeSolo();
-        cafe=new Crema(cafe);
+        Cafe cafe =new Leche(new Canela(new Leche(new Crema(new CafeSolo()))));
+        System.out.println("bebida "+cafe.ingredientes()+" costo "+cafe.costo()+" tamaño "+cafe.tamanio());
+        /**cafe=new Crema(cafe);
         System.out.println("bebida "+cafe.ingredientes()+" costo "+cafe.costo()+" tamaño "+cafe.tamanio());
         cafe=new Canela(cafe);
         System.out.println("bebida "+cafe.ingredientes()+" costo "+cafe.costo()+" tamaño "+cafe.tamanio());
         Leche leche=new Leche(cafe);
-        System.out.println("bebida "+leche.ingredientes()+" costo "+leche.costo()+" tamaño "+leche.tamanio());
+        System.out.println("bebida "+leche.ingredientes()+" costo "+leche.costo()+" tamaño "+leche.tamanio());*/
+        
     }
     
 }
